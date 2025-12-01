@@ -1,21 +1,28 @@
+/* ------------------ RESET ------------------ */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ------------------ BODY ------------------ */
+
 body {
   background: #000;
   color: #fff;
   font-family: 'Inter', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  /* permitir scroll en móvil */
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /* sin flex para que no bloquee scroll */
+  display: block;
 }
 
-/* ------------------ INTRO ------------------ */
+/* ------------------ INTRO ANIMATION ------------------ */
 
 #intro {
   position: fixed;
@@ -61,14 +68,16 @@ body {
   to { opacity: 0; visibility: hidden; }
 }
 
-/* ------------------ CONTENIDO ------------------ */
-
-.hidden { opacity: 0; }
+/* ------------------ MAIN CONTENT ------------------ */
 
 .container {
   text-align: center;
   width: 90%;
   max-width: 480px;
+
+  /* margen natural para permitir scroll */
+  margin: 100px auto 80px;
+
   opacity: 0;
   animation: reveal 1.5s ease 2.5s forwards;
 }
@@ -98,7 +107,7 @@ body {
   color: #ccc;
 }
 
-/* LINKS */
+/* ------------------ LINKS ------------------ */
 
 .links {
   display: flex;
@@ -123,7 +132,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* SOCIAL ICONS */
+/* ------------------ SOCIAL ICONS ------------------ */
 
 .social {
   display: flex;
@@ -143,8 +152,10 @@ body {
   opacity: 1;
 }
 
-/* FLOAT TITLE */
+/* ------------------ FLOAT EFFECT ------------------ */
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-5px); }
 }
+
