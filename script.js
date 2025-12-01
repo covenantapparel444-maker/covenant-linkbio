@@ -1,12 +1,12 @@
-// Animación cuando se hace clic en los links
+// Animación al hacer clic en los links
 document.querySelectorAll('.link').forEach(link => {
-  link.addEventListener('click', e => {
+  link.addEventListener('click', () => {
     link.classList.add('clicked');
     setTimeout(() => link.classList.remove('clicked'), 300);
   });
 });
 
-// Después de la intro, aparece la página
+// Mostrar el contenido después de la intro
 setTimeout(() => {
   document.querySelector('.container').classList.remove('hidden');
 }, 2200);
