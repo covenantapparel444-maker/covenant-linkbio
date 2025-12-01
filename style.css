@@ -142,9 +142,14 @@ body {
 }
 
 .social-icon img {
-  width: 28px;
+  width: 26px;      /* tamaño uniforme */
+  height: 26px;     /* fuerza proporción exacta */
   opacity: 0.7;
   transition: 0.3s ease;
+
+  /* asegura que no se deformen */
+  object-fit: contain;
+  display: block;
 }
 
 .social-icon img:hover {
